@@ -5,7 +5,6 @@ import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
   <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
 </template>
 
@@ -18,4 +17,11 @@ import HelloWorld from './components/HelloWorld.vue'
   color: #2c3e50;
   margin-top: 60px;
 }
+
+
+/* 添加这段样式后，Primary Button 会变成红色 */
+:root {
+    --van-blue: red;
+}
+
 </style>

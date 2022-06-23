@@ -10,14 +10,8 @@
     "release": "standard-version"
   },
   "dependencies": {
-    "amfe-flexible": "^2.2.1",
-    "axios": "^0.27.2",
     "husky": "^8.0.1",
-    "pinia": "^2.0.14",
-    "vant": "^3.5.1",
-    "vconsole": "^3.14.6",
-    "vue": "^3.2.25",
-    "vue-router": "^4.0.16"
+    "vue": "^3.2.25"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.0.2",
@@ -40,14 +34,10 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm test",
-      "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "lint-staged": {
-    "*.{js, vue, css}": [
-      "eslint",
-      "git add"
-    ]
+    "*.{js,ts}": "eslint --fix"
   }
 }
